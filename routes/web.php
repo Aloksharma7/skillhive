@@ -8,7 +8,9 @@ use App\Http\Controllers\CourseController;
 Route::get('/', function () {
     return view('home.index');
 });
-
+    Route::get('/search', function(){
+        return view('home.search');
+    })->name('search');
 // Authentication routes
 Route::middleware('guest')->group(function () {
     Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
@@ -16,6 +18,7 @@ Route::middleware('guest')->group(function () {
 
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
     Route::post('/login', [AuthController::class, 'login']);
+
 });
 
 Route::middleware('auth')->group(function () {
