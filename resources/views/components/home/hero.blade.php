@@ -34,70 +34,79 @@
 <!-- Course and collage -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-           
-    <section class="max-w-4xl mx-auto px-4 py-12">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-2">Find Your Study Path</h2>
-            <p class="text-gray-500 max-w-lg mx-auto">Select from our carefully curated academic programs</p>
-        </div>
+   <section class="max-w-6xl mx-auto px-4 py-12 w-[90%]">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-3">Find Your Study Path</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">Select from our carefully curated academic programs</p>
+    </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl p-6 group hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-blue-500/10 hover:border-[0.5px]">
-                <div class="w-14 h-14 flex items-center justify-center bg-blue-50 rounded-xl mb-5 group-hover:bg-blue-100 transition-all">
-                    <i class="fas fa-user-graduate text-blue-600 text-xl"></i>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Card: Engineering -->
+        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-all mb-3">
+                    <i class="fas fa-user-graduate text-blue-600 text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-1">Engineering</h3>
-                <p class="text-sm text-gray-500 mb-4">6,323 Colleges</p>
-                <div class="space-y-2">
-                    <div class="text-sm text-gray-700 hover:text-blue-600 transition py-1 hover:pl-2 hover:bg-blue-50 rounded">BE/B.Tech</div>
-                    <div class="text-sm text-gray-700 hover:text-blue-600 transition py-1 hover:pl-2 hover:bg-blue-50 rounded">Diploma</div>
-                    <div class="text-sm text-gray-700 hover:text-blue-600 transition py-1 hover:pl-2 hover:bg-blue-50 rounded">ME/M.Tech</div>
-                </div>
+                <h3 class="text-lg font-semibold text-gray-800">Engineering</h3>
+                <p class="text-sm text-gray-500 mt-1">6,323 Colleges</p>
             </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl p-6 group hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-blue-500/10 hover:border-[0.5px]">
-                <div class="w-14 h-14 flex items-center justify-center bg-pink-50 rounded-xl mb-5 group-hover:bg-pink-100 transition-all">
-                    <i class="fa-solid fa-house-medical text-pink-500 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-1">Medical</h3>
-                <p class="text-sm text-gray-500 mb-4">7,895 Colleges</p>
-                <div class="space-y-2">
-                    <div class="text-sm text-gray-700 hover:text-pink-500 transition py-1 hover:pl-2 hover:bg-pink-50 rounded">MBBS</div>
-                    <div class="text-sm text-gray-700 hover:text-pink-500 transition py-1 hover:pl-2 hover:bg-pink-50 rounded">Nursing</div>
-                    <div class="text-sm text-gray-700 hover:text-pink-500 transition py-1 hover:pl-2 hover:bg-pink-50 rounded">Pharmecy</div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl p-6 group hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-blue-500/10 hover:border-[0.5px]">
-                <div class="w-14 h-14 flex items-center justify-center bg-blue-50 rounded-xl mb-5 group-hover:bg-blue-100 transition-all">
-                    <i class="fas fa-shopping-cart text-blue-600 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-1">Commerce</h3>
-                <p class="text-sm text-gray-500 mb-4">5,042 Colleges</p>
-                <div class="space-y-2">
-                    <div class="text-sm text-gray-700 hover:text-blue-600 transition py-1 hover:pl-2 hover:bg-blue-50 rounded">B.Com</div>
-                    <div class="text-sm text-gray-700 hover:text-blue-600 transition py-1 hover:pl-2 hover:bg-blue-50 rounded">M.Com</div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white rounded-xl p-6 group hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-blue-500/10 hover:border-[0.5px]">
-                <div class="w-14 h-14 flex items-center justify-center bg-pink-50 rounded-xl mb-5 group-hover:bg-pink-100 transition-all">
-                    <i class="fas fa-paint-brush text-pink-500 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-1">Arts</h3>
-                <p class="text-sm text-gray-500 mb-4">5,691 Colleges</p>
-                <div class="space-y-2">
-                    <div class="text-sm text-gray-700 hover:text-pink-500 transition py-1 hover:pl-2 hover:bg-pink-50 rounded">BA</div>
-                    <div class="text-sm text-gray-700 hover:text-pink-500 transition py-1 hover:pl-2 hover:bg-pink-50 rounded">MA</div>
-                    <div class="text-sm text-gray-700 hover:text-pink-500 transition py-1 hover:pl-2 hover:bg-pink-50 rounded">BFA</div>
-                </div>
+            <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
+                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">BE/B.Tech</div>
+                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">Diploma</div>
+                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">ME/M.Tech</div>
             </div>
         </div>
-    </section>
+
+        <!-- Card: Medical -->
+        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div class="w-16 h-16 flex items-center justify-center bg-pink-50 rounded-xl group-hover:bg-pink-100 transition-all mb-3">
+                    <i class="fa-solid fa-house-medical text-pink-500 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800">Medical</h3>
+                <p class="text-sm text-gray-500 mt-1">7,895 Colleges</p>
+            </div>
+            <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
+                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">MBBS</div>
+                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">Nursing</div>
+                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">Pharmecy</div>
+            </div>
+        </div>
+
+        <!-- Card: Commerce -->
+        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-all mb-3">
+                    <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800">Commerce</h3>
+                <p class="text-sm text-gray-500 mt-1">5,042 Colleges</p>
+            </div>
+            <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
+                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">B.Com</div>
+                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">M.Com</div>
+            </div>
+        </div>
+
+        <!-- Card: Arts -->
+        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div class="w-16 h-16 flex items-center justify-center bg-pink-50 rounded-xl group-hover:bg-pink-100 transition-all mb-3">
+                    <i class="fas fa-paint-brush text-pink-500 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800">Arts</h3>
+                <p class="text-sm text-gray-500 mt-1">5,691 Colleges</p>
+            </div>
+            <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
+                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">BA</div>
+                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">MA</div>
+                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">BFA</div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 <!-- Popular Courses Section -->
@@ -109,7 +118,7 @@
             <p class="text-[#6B7280] max-w-2xl mx-auto text-lg">Handpicked courses loved by our community of 500,000+ learners</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Course Card 1 -->
             <div class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all border border-[#E5E7EB] hover:border-[#D1D5DB]">
                 <div class="relative h-56 bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] flex items-center justify-center">
@@ -118,7 +127,7 @@
                         <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">BESTSELLER</span>
                     </div>
                 </div>
-                <div class="p-6">
+                <div class="p-2">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="text-xl font-bold text-[#111827] group-hover:text-[#4F46E5] transition-colors">Introduction to Computer Science</h3>
                     </div>
@@ -128,27 +137,11 @@
                         </svg>
                         Harvard University
                     </p>
-                    <div class="flex justify-between items-center text-sm">
-                        <div class="flex items-center">
-                            <div class="flex items-center text-yellow-400 mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <span class="ml-1 text-[#111827] font-medium">4.7</span>
-                                <span class="text-[#6B7280] ml-1">(2,134)</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center text-[#6B7280]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            12 hours
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-6 border-t border-[#E5E7EB] flex justify-between items-center">
-                        <span class="text-lg font-bold text-[#4F46E5]">Free</span>
+                    
+                    <div class="mt-6 pt-2 border-t border-[#E5E7EB] flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#4F46E5]"></span>
                         <button class="px-4 py-2 bg-[#4F46E5] hover:bg-[#4338CA] text-white rounded-lg text-sm font-medium transition-colors">
-                            Enroll Now
+                            View
                         </button>
                     </div>
                 </div>
@@ -162,9 +155,9 @@
                         <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">NEW</span>
                     </div>
                 </div>
-                <div class="p-6">
+                <div class="p-2">
                     <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-[#111827] group-hover:text-[#4F46E5] transition-colors">AI For Everyone</h3>
+                        <h3 class="text-xl font-bold text-[#111827] group-hover:text-[#4F46E5] transition-colors">Jounney of AI for Everythings </h3>
                     </div>
                     <p class="text-[#6B7280] mb-4 flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#4F46E5]" viewBox="0 0 20 20" fill="currentColor">
@@ -172,27 +165,10 @@
                         </svg>
                         Stanford University
                     </p>
-                    <div class="flex justify-between items-center text-sm">
-                        <div class="flex items-center">
-                            <div class="flex items-center text-yellow-400 mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <span class="ml-1 text-[#111827] font-medium">4.3</span>
-                                <span class="text-[#6B7280] ml-1">(1,542)</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center text-[#6B7280]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            8 hours
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-6 border-t border-[#E5E7EB] flex justify-between items-center">
-                        <span class="text-lg font-bold text-[#4F46E5]">Free</span>
+                    <div class="mt-6 pt-2 border-t border-[#E5E7EB] flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#4F46E5]"></span>
                         <button class="px-4 py-2 bg-[#4F46E5] hover:bg-[#4338CA] text-white rounded-lg text-sm font-medium transition-colors">
-                            Enroll Now
+                            View
                         </button>
                     </div>
                 </div>
@@ -203,9 +179,9 @@
                 <div class="relative h-56 bg-gradient-to-r from-[#D946EF] to-[#A855F7] flex items-center justify-center">
                     <span class="text-white text-3xl font-bold">DS101</span>
                 </div>
-                <div class="p-6">
+                <div class="p-2">
                     <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-[#111827] group-hover:text-[#4F46E5] transition-colors">Data Science Fundamentals</h3>
+                        <h3 class="text-xl font-bold text-[#111827] group-hover:text-[#4F46E5] transition-colors">Basic Cyber Security </h3>
                     </div>
                     <p class="text-[#6B7280] mb-4 flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#4F46E5]" viewBox="0 0 20 20" fill="currentColor">
@@ -213,27 +189,33 @@
                         </svg>
                         Massachusetts Institute of Technology
                     </p>
-                    <div class="flex justify-between items-center text-sm">
-                        <div class="flex items-center">
-                            <div class="flex items-center text-yellow-400 mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <span class="ml-1 text-[#111827] font-medium">4.9</span>
-                                <span class="text-[#6B7280] ml-1">(3,217)</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center text-[#6B7280]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            15 hours
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-6 border-t border-[#E5E7EB] flex justify-between items-center">
-                        <span class="text-lg font-bold text-[#4F46E5]">Free</span>
+                    <div class="mt-6 pt-2 border-t border-[#E5E7EB] flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#4F46E5]"></span>
                         <button class="px-4 py-2 bg-[#4F46E5] hover:bg-[#4338CA] text-white rounded-lg text-sm font-medium transition-colors">
-                            Enroll Now
+                            View
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Course Card 4 -->
+            <div class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all border border-[#E5E7EB] hover:border-[#D1D5DB]">
+                <div class="relative h-56 bg-gradient-to-r from-[#D946EF] to-[#A855F7] flex items-center justify-center">
+                    <span class="text-white text-3xl font-bold">IIT01</span>
+                </div>
+                <div class="p-2">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-xl font-bold text-[#111827] group-hover:text-[#4F46E5] transition-colors">Data Science and Its Fundamentals</h3>
+                    </div>
+                    <p class="text-[#6B7280] mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#4F46E5]" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                        </svg>
+                        India Institute of Technology
+                    </p>
+                    <div class="mt-6 pt-2 border-t border-[#E5E7EB] flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#4F46E5]"></span>
+                        <button class="px-4 py-2 bg-[#4F46E5] hover:bg-[#4338CA] text-white rounded-lg text-sm font-medium transition-colors">
+                            View
                         </button>
                     </div>
                 </div>
