@@ -6,10 +6,10 @@
 
         <!-- Header -->
         <div class="text-center">
-            <h2 class="text-3xl font-bold text-gray-800">Log-in</h2>
+            <h2 class="text-3xl font-bold text-gray-800">Create an account</h2>
             <p class="mt-2 text-sm text-gray-600">
-                I don't have account?
-                <a href="#" class="text-primary hover:underline">Sign-up</a>
+                Already have an account?
+                <a href="#" class="text-primary hover:underline">Login</a>
             </p>
         </div>
 
@@ -29,7 +29,7 @@
             @csrf
 
                 <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700"> Username</label>
+                    <label for="name" class="block text-sm font-medium text-gray-700"> Name</label>
                     <input
                         id="name"
                         name="name"
@@ -37,7 +37,7 @@
                         required
                         autofocus
                         class="mt-1 block w-full rounded-md border border-gray-300 px-4 py-2 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-                    placeholder="John Doe"
+                        placeholder="John"
                     >
                 </div>
 
