@@ -19,7 +19,7 @@
                     </div>
                 </div>
 
-                <!-- Category Filter -->
+                <!-- categories Filter -->
                 <select id="pdfCategory" class="block w-full md:w-64 px-4 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:ring-2 focus:ring-blue-500">
                     <option value="">All Categories</option>
                     <option value="notes">Lecture Notes</option>

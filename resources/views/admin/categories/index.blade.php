@@ -25,7 +25,7 @@
     <form action="{{ route('categories.store') }}" method="POST" class="space-y-6 bg-white p-6 rounded shadow">
         @csrf
 
-        <!-- Category Name -->
+        <!-- categories Name -->
         <div>
             <label for="name" class="block mb-1 text-sm font-medium text-gray-700">Category Name</label>
             <input type="text" name="name" id="name" value="{{ old('name') }}" required

@@ -11,7 +11,7 @@
                 <input id="oppSearch" type="text" placeholder="Search by title or description..."
                     class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
 
-                <!-- Category Filter -->
+                <!-- categories Filter -->
                 <select id="oppCategory" class="w-full md:w-60 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
                     <option value="">All Categories</option>
                     <option value="internship">Internship</option>

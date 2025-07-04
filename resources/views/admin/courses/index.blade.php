@@ -28,7 +28,7 @@
             <!-- Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                <!-- Category -->
+                <!-- categories -->
                 <div>
                     <label for="category_id" class="block mb-1 text-sm font-medium text-gray-700">Category</label>
                     <select name="category_id" id="category_id" required

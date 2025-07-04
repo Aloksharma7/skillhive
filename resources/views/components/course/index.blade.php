@@ -36,7 +36,7 @@
 
         <!-- Course Categories Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <!-- Computer Science Category -->
+            <!-- Computer Science categories -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
                 <div class="p-6">
                     <div class="flex items-center justify-center w-16 h-16 rounded-lg bg-blue-100 mb-4">
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <!-- Biotechnology Category -->
+            <!-- Biotechnology categories -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
                 <div class="p-6">
                     <div class="flex items-center justify-center w-16 h-16 rounded-lg bg-green-100 mb-4">
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <!-- Management Category -->
+            <!-- Management categories -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
                 <div class="p-6">
                     <div class="flex items-center justify-center w-16 h-16 rounded-lg bg-purple-100 mb-4">
@@ -90,7 +90,7 @@
                 </div>
             </div>
 
-            <!-- Engineering Category -->
+            <!-- Engineering categories -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
                 <div class="p-6">
                     <div class="flex items-center justify-center w-16 h-16 rounded-lg bg-amber-100 mb-4">

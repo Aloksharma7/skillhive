@@ -11,8 +11,8 @@ class CourseController extends Controller
     // List all courses
     public function index()
     {
-        // eager load category to avoid N+1 problem
-//        $courses = Course::with('category')->get();
+        // eager load categories to avoid N+1 problem
+//        $courses = Course::with('categories')->get();
         $categories = Category::all();
         return view('admin.courses.index', compact('categories'));
     }

@@ -3,7 +3,7 @@
 @section('dash-content')
 <div class="min-h-screen bg-gray-50 py-12 px-6">
     <div class="max-w-4xl mx-auto bg-white shadow-md rounded-xl p-8">
-        <!-- Category & ID -->
+        <!-- categories & ID -->
         <div class="mb-4">
             <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-{{ $opportunity->color }}-100 text-{{ $opportunity->color }}-800 uppercase">
                 #{{ $opportunity->id }} — {{ ucfirst($opportunity->category) }}

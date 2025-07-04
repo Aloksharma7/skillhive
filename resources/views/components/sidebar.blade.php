@@ -10,35 +10,64 @@
             <!-- Main Navigation -->
             <nav class="flex-1">
                 <ul class="space-y-2">
-                    <a href="{{ route('dashboard') }}" 
-   class="block px-4 py-2 rounded transition 
+                    <a href="{{ route('dashboard') }}"
+   class="block px-4 py-2 rounded transition
    {{ request()->routeIs('dashboard') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
    Dashboard
 </a>
 
-<a href="{{ route('course') }}" 
-   class="block px-4 py-2 rounded transition 
+<a href="{{ route('course') }}"
+   class="block px-4 py-2 rounded transition
    {{ request()->routeIs('course') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
    Courses
 </a>
 
-<a href="{{ route('pdfs') }}" 
-   class="block px-4 py-2 rounded transition 
+<a href="{{ route('pdfs') }}"
+   class="block px-4 py-2 rounded transition
    {{ request()->routeIs('pdfs') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
    PDF Resources
 </a>
 
-<a href="{{ route('opportunities') }}" 
-   class="block px-4 py-2 rounded transition 
+<a href="{{ route('opportunities') }}"
+   class="block px-4 py-2 rounded transition
    {{ request()->routeIs('opportunities') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
    Opportunities
 </a>
 
-<a href="{{ route('blogs') }}" 
-   class="block px-4 py-2 rounded transition 
+<a href="{{ route('blogs') }}"
+   class="block px-4 py-2 rounded transition
    {{ request()->routeIs('blogs') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
    Blogs
 </a>
+                    @auth
+                        @if (Auth::user()->role === 'superadmin')
+                            <a href="{{ route('categories.index') }}"
+                               class="block px-4 py-2 rounded transition
+           {{ request()->routeIs('categories') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+                                Add category
+                            </a>
+
+                            <a href="{{ route('courses.index') }}"
+                               class="block px-4 py-2 rounded transition
+           {{ request()->routeIs('courses') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+                                Add courses
+                            </a>
+
+                            <a href="{{ route('opportunities') }}"
+                               class="block px-4 py-2 rounded transition
+           {{ request()->routeIs('opportunities') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+                                Add opportunities
+                            </a>
+
+                            <a href="{{ route('blogs') }}"
+                               class="block px-4 py-2 rounded transition
+           {{ request()->routeIs('blogs') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+                                Add blogs
+                            </a>
+                        @endif
+                    @endauth
+
+
 
                 </ul>
             </nav>

@@ -20,19 +20,21 @@ class CategoryController extends Controller
         return view('admin.categories.create');
     }
 
-    // Store new category
+    // Store new categories
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255|unique:categories',
         ]);
 
-        Category::create($request->only('name'));
+        // Fix: Pass only the validated data as an array
+        Category::create($request->only(['name', 'slug']));
 
         return redirect()->route('admin.categories.index')->with('success', 'Category created!');
     }
 
-    // Show single category (optional)
+    // Show single categories (optional)
     public function show(Category $category)
     {
         return view('admin.categories.show', compact('category'));
@@ -44,7 +46,7 @@ class CategoryController extends Controller
         return view('admin.categories.edit', compact('category'));
     }
 
-    // Update category
+    // Update categories
     public function update(Request $request, Category $category)
     {
         $request->validate([
@@ -53,14 +55,14 @@ class CategoryController extends Controller
 
         $category->update($request->only('name'));
 
-        return redirect()->route('admin.categories.index')->with('success', 'Category updated!');
+        return redirect()->route('admin.categories.index')->with('success', 'categories updated!');
     }
 
-    // Delete category
+    // Delete categories
     public function destroy(Category $category)
     {
         $category->delete();
 
-        return redirect()->route('admin.categories.index')->with('success', 'Category deleted!');
+        return redirect()->route('admin.categories.index')->with('success', 'categories deleted!');
     }
 }
