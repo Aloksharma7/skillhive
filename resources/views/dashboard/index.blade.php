@@ -21,6 +21,13 @@
                             </div>
                         </div>
                     </div>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200">
+                            Logout
+                        </button>
+                    </form>
+
 
                     <!-- Stats -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
