@@ -13,14 +13,14 @@ class CourseController extends Controller
     {
         // eager load category to avoid N+1 problem
         $courses = Course::with('category')->get();
-        return view('courses.index', compact('courses'));
+        return view('admin.courses.index', compact('courses'));
     }
 
     // Show create form
     public function create()
     {
         $categories = Category::all();
-        return view('courses.create', compact('categories'));
+        return view('admin.courses.create', compact('categories'));
     }
 
     // Store new course
@@ -38,20 +38,20 @@ class CourseController extends Controller
 
         Course::create($request->all());
 
-        return redirect()->route('courses.index')->with('success', 'Course created!');
+        return redirect()->route('admin.courses.index')->with('success', 'Course created!');
     }
 
     // Show single course
     public function show(Course $course)
     {
-        return view('courses.show', compact('course'));
+        return view('admin.courses.show', compact('course'));
     }
 
     // Show edit form
     public function edit(Course $course)
     {
         $categories = Category::all();
-        return view('courses.edit', compact('course', 'categories'));
+        return view('admin.courses.edit', compact('course', 'categories'));
     }
 
     // Update course
@@ -69,7 +69,7 @@ class CourseController extends Controller
 
         $course->update($request->all());
 
-        return redirect()->route('courses.index')->with('success', 'Course updated!');
+        return redirect()->route('admin.courses.index')->with('success', 'Course updated!');
     }
 
     // Delete course
@@ -77,6 +77,6 @@ class CourseController extends Controller
     {
         $course->delete();
 
-        return redirect()->route('courses.index')->with('success', 'Course deleted!');
+        return redirect()->route('admin.courses.index')->with('success', 'Course deleted!');
     }
 }
