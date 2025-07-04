@@ -1,4 +1,4 @@
- <footer class="bg-gradient-to-br from-[#AEE4FF] via-[#6A9CFD] to-[#FFB8D0] text-white py-12">
+<footer class="bg-gradient-to-br from-[#AEE4FF] via-[#6A9CFD] via-[#FFB8D0] via-[#FEE5E1] to-[#FFBFB3] text-white py-12">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Logo Section -->
             <div class="text-center md:text-left">
@@ -49,6 +49,7 @@
                 <div class="space-y-4">
                     <p class="text-white/90 flex items-center justify-center md:justify-start">
                         <span class="mr-3">📧</span>
+
                         info@yourcompany.com
                     </p>
                     <p class="text-white/90 flex items-center justify-center md:justify-start">
