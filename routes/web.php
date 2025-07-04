@@ -27,19 +27,19 @@ Route::middleware('auth')->group(function () {
     Route::resource('courses', CourseController::class);
 
     Route::get('/course', function (){
-        return view('components.course.index')->name('course');
-    });
-
+        return view('components.course.index');
+    })->name('course');
 
     Route::get('/pdfs', function (){
-        return view('pdfs.index')->name('pdfs');
-    });
+        return view('pdfs.index');
+    })->name('pdfs');
+
     Route::get('/opportunities', function (){
-        return view('opportunities.index')->name('opportunities');
-    });
+        return view('opportunities.index');
+    })->name('opportunities');
     Route::get('/blogs', function (){
-        return view('blogs.index')->name('blogs');
-    });
+        return view('blogs.index');
+    })->name('blogs');
 
 });
 
