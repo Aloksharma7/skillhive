@@ -49,7 +49,7 @@
                         <a href="#" class="bg-blue-50 hover:bg-blue-100 text-blue-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Programming</a>
                         <a href="#" class="bg-blue-50 hover:bg-blue-100 text-blue-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">AI/ML</a>
                         <a href="#" class="bg-blue-50 hover:bg-blue-100 text-blue-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Cybersecurity</a>
-                        <a href="#" class="bg-blue-50 hover:bg-blue-100 text-blue-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">+5</a>
+                        <a href="#" class="bg-blue-50 hover:bg-blue-100 text-blue-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Data Science</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         <a href="#" class="bg-green-50 hover:bg-green-100 text-green-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Genetics</a>
                         <a href="#" class="bg-green-50 hover:bg-green-100 text-green-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Bioinformatics</a>
                         <a href="#" class="bg-green-50 hover:bg-green-100 text-green-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Pharmaceutical</a>
-                        <a href="#" class="bg-green-50 hover:bg-green-100 text-green-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">+5</a>
+                        <a href="#" class="bg-green-50 hover:bg-green-100 text-green-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Biochemistry</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                         <a href="#" class="bg-purple-50 hover:bg-purple-100 text-purple-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Marketing</a>
                         <a href="#" class="bg-purple-50 hover:bg-purple-100 text-purple-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Finance</a>
                         <a href="#" class="bg-purple-50 hover:bg-purple-100 text-purple-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">HR</a>
-                        <a href="#" class="bg-purple-50 hover:bg-purple-100 text-purple-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">+8</a>
+                        <a href="#" class="bg-purple-50 hover:bg-purple-100 text-purple-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Operations</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                         <a href="#" class="bg-amber-50 hover:bg-amber-100 text-amber-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Mechanical</a>
                         <a href="#" class="bg-amber-50 hover:bg-amber-100 text-amber-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Electrical</a>
                         <a href="#" class="bg-amber-50 hover:bg-amber-100 text-amber-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Civil</a>
-                        <a href="#" class="bg-amber-50 hover:bg-amber-100 text-amber-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">+9</a>
+                        <a href="#" class="bg-amber-50 hover:bg-amber-100 text-amber-800 text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-200">Chemical</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +117,113 @@
             </div>
         </div>
 
+        <!-- PDF Resources Section -->
+        <div class="mb-12" id="pdfSection">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">PDF Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Computer Science PDFs -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-40 bg-blue-100 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="uppercase tracking-wide text-sm text-blue-600 font-semibold">Computer Science</div>
+                        <h3 class="text-lg font-medium text-gray-900 mt-1">Python Basics</h3>
+                        <p class="mt-2 text-gray-500">Introduction to Python programming language</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2.4 MB</span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center">
+                                Download
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Biotechnology PDFs -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-40 bg-green-100 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="uppercase tracking-wide text-sm text-green-600 font-semibold">Biotechnology</div>
+                        <h3 class="text-lg font-medium text-gray-900 mt-1">Genetic Engineering</h3>
+                        <p class="mt-2 text-gray-500">Fundamentals of genetic manipulation</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">3.1 MB</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 text-sm font-medium flex items-center">
+                                Download
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Management PDFs -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-40 bg-purple-100 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="uppercase tracking-wide text-sm text-purple-600 font-semibold">Management</div>
+                        <h3 class="text-lg font-medium text-gray-900 mt-1">Marketing Strategies</h3>
+                        <p class="mt-2 text-gray-500">Modern digital marketing techniques</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">1.8 MB</span>
+                            <a href="#" class="text-purple-600 hover:text-purple-800 text-sm font-medium flex items-center">
+                                Download
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering PDFs -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-40 bg-amber-100 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="uppercase tracking-wide text-sm text-amber-600 font-semibold">Engineering</div>
+                        <h3 class="text-lg font-medium text-gray-900 mt-1">Mechanical Principles</h3>
+                        <p class="mt-2 text-gray-500">Core concepts of mechanical engineering</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">4.2 MB</span>
+                            <a href="#" class="text-amber-600 hover:text-amber-800 text-sm font-medium flex items-center">
+                                Download
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Section -->
+        <div class="text-center mb-8">
+            <button id="backToTopBtn" class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+                Back to Top
+            </button>
+        </div>
     </div>
 </div>
 
