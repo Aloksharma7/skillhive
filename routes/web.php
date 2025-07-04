@@ -26,14 +26,19 @@ Route::middleware('auth')->group(function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('courses', CourseController::class);
 
+    Route::get('/course', function (){
+        return view('components.course.index')->name('course');
+    });
+
+
     Route::get('/pdfs', function (){
-        return view('pdfs.index');
+        return view('pdfs.index')->name('pdfs');
     });
     Route::get('/opportunities', function (){
-        return view('opportunities.index');
+        return view('opportunities.index')->name('opportunities');
     });
     Route::get('/blogs', function (){
-        return view('blogs.index');
+        return view('blogs.index')->name('blogs');
     });
 
 });
@@ -46,6 +51,3 @@ Route::middleware('auth')->group(function () {
 //    return Auth::check() ? redirect()->route('dashboard') : redirect()->route('login');
 //});
 
-Route::get('/course', function (){
-    return view('components.course.index');
-});
