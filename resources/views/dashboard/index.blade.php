@@ -11,6 +11,5 @@
 <x-sidebar/>
 @yield('dash-content')
 
-
 </body>
 </html>
