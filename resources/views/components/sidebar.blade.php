@@ -54,11 +54,11 @@
                 <!-- User Profile -->
                 <div class="flex items-center space-x-4">
                     <div class="text-right">
-                        <p class="font-medium text-[#111827]">John Doe</p>
-                        <p class="text-sm text-[#6B7280]">Administrator</p>
+                        <p class="font-medium text-[#111827]">{{ Auth::user()->name }}</p>
+                        <p class="text-sm text-[#6B7280]">{{ Auth::user()->role }}</p>
                     </div>
                     <div class="w-10 h-10 rounded-full bg-[#4F46E5] flex items-center justify-center text-white font-bold">
-                        JD
+                        {{ strtoupper(substr(explode(' ', Auth::user()->name)[0], 0, 1) . substr(explode(' ', Auth::user()->name)[1] ?? '', 0, 1)) }}
                     </div>
                 </div>
             </header>

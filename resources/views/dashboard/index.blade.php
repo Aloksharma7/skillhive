@@ -1,26 +1,27 @@
 @extends('layouts.dashboard')
 @section('dash-content')
 
-<main class="flex-1 overflow-y-auto p-6 bg-[#F9FAFB]"> 
+<main class="flex-1 overflow-y-auto p-6 bg-[#F9FAFB]">
                 <!-- User Profile Card -->
                 <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-6">
                     <div class="flex items-center space-x-6">
                         <!-- Avatar -->
                         <div class="w-20 h-20 rounded-full bg-[#4F46E5] flex items-center justify-center text-white text-3xl font-bold">
-                            JD
+                            {{ strtoupper(substr(explode(' ', Auth::user()->name)[0], 0, 1) . substr(explode(' ', Auth::user()->name)[1] ?? '', 0, 1)) }}
+
                         </div>
-                        
+
                         <!-- User Info -->
                         <div>
-                            <h3 class="text-2xl font-bold text-[#111827]">John Doe</h3>
-                            <p class="text-[#6B7280]">john.doe@skillhive.com</p>
+                            <h3 class="text-2xl font-bold text-[#111827]">{{ Auth::user()->name }}</h3>
+                            <p class="text-[#6B7280]">{{ Auth::user()->email }}</p>
                             <div class="flex space-x-4 mt-2">
                                 <span class="px-3 py-1 bg-[#E0E7FF] text-[#4F46E5] rounded-full text-sm">Administrator</span>
                                 <span class="px-3 py-1 bg-[#ECFDF5] text-[#059669] rounded-full text-sm">Active</span>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Stats -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                         <div class="bg-[#F9FAFB] p-4 rounded-lg border border-[#E5E7EB]">
@@ -36,7 +37,7 @@
                             <p class="text-2xl font-bold text-[#111827]">2h ago</p>
                         </div>
                     </div>
-                    
+
                     <!-- Recent Activity -->
                     <div class="mt-8">
                         <h4 class="text-lg font-semibold text-[#111827] mb-4">Recent Activity</h4>

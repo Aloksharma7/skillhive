@@ -34,7 +34,6 @@ Route::resource('courses', CourseController::class);
 //    return Auth::check() ? redirect()->route('dashboard') : redirect()->route('login');
 //});
 
-
-    Route::get('/course', function () {
-        return view('components.course.index');
-    })->name('course');
+Route::get('/course', function (){
+    return view('components.course.index');
+});
