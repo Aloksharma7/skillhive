@@ -7,8 +7,10 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+{{--<x-header />--}}
+<x-footer />
+{{--<x-sidebar />--}}
 
-<h1 class="text-3xl">Hello </h1>
 
 </body>
 </html>
