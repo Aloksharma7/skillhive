@@ -23,11 +23,23 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.index');
     })->name('dashboard');
+    Route::resource('categories', CategoryController::class);
+    Route::resource('courses', CourseController::class);
+
+    Route::get('/pdfs', function (){
+        return view('pdfs.index');
+    });
+    Route::get('/opportunities', function (){
+        return view('opportunities.index');
+    });
+    Route::get('/blogs', function (){
+        return view('blogs.index');
+    });
+
 });
 
 
-Route::resource('categories', CategoryController::class);
-Route::resource('courses', CourseController::class);
+
 
 // Redirect root to dashboard if logged in, otherwise to login
 //Route::get('/', function () {
