@@ -8,7 +8,8 @@
 </head>
 <body>
 {{--<x-header />--}}
-<x-home.hero />
+{{--<x-home.hero />--}}
+@yield('content')
 <x-footer />
 {{--<x-sidebar />--}}
 

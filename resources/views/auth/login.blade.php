@@ -1,3 +1,5 @@
+@extends('layouts.home')
+@section('content')
 <div class="max-w-md w-full auth-container rounded-2xl shadow-xl overflow-hidden">
         <div class="p-10">
             <!-- Error Alert (shown when backend returns errors) -->
@@ -111,3 +113,6 @@
                     </svg>
                 </button>
             </form>
+        </div>
+</div>
+@endSection
