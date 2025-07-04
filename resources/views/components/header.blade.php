@@ -27,8 +27,8 @@
     `;
   } else {
     navButtons.innerHTML = `
-      <a href="/signin" class="px-4 py-2 text-skyblue border border-skyblue rounded hover:bg-skyblue hover:text-white transition">Sign In</a>
-      <a href="/signup" class="px-4 py-2 bg-skyblue text-white rounded hover:bg-coral transition">Sign Up</a>
-    `;
+      <a href="/login" class="px-4 py-2 text-skyblue border border-skyblue rounded hover:bg-skyblue hover:bg-blue-100 transition">Log In</a>
+      <a href="/register" class="px-4 py-2 bg-skyblue border rounded hover:bg-blue-100 hover:border-skyblue transition">Register</a>
+      `;
   }
 </script>
