@@ -8,6 +8,7 @@
 </head>
 <body>
 {{--<x-header />--}}
+<x-home.hero />
 <x-footer />
 {{--<x-sidebar />--}}
 
