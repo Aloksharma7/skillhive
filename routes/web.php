@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
-    return view('layouts.home');
+    return view('home.index');
 });
 
 // Authentication routes

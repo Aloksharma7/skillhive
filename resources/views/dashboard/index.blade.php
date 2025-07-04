@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<x-header />
-@yield('content')
-<x-footer />
+<x-sidebar/>
+@yield('dash-content')
+
 
 </body>
 </html>
