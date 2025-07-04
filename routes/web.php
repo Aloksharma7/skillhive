@@ -16,12 +16,12 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
 });
 
-Route::middleware('auth')->group(function () {
+//Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard.index');
     })->name('dashboard');
-});
+//});
 
 // Redirect root to dashboard if logged in, otherwise to login
 //Route::get('/', function () {
