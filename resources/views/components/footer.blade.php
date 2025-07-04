@@ -5,10 +5,13 @@
                 <!-- Logo Section -->
                 <div class="space-y-6">
                     <div class="text-2xl font-bold">
-                        <span class="bg-blue-600 px-4 py-2 rounded-lg inline-block">Logo</span>
+                        <span class=" px-3 py-1 rounded-lg">SkillHive</span>
                     </div>
                     <p class="text-gray-300 leading-relaxed max-w-sm">
                         Creating beautiful, modern, and minimal designs that make a lasting impression.
+                    <p class="text-white/90 flex items-center justify-center md:justify-start">
+                        <span class="mr-3">📧</span>
+                        info@yourcompany.com
                     </p>
                     <div class="flex space-x-5 pt-2">
                         <a href="#" class="text-gray-400 hover:text-white hover:scale-110 transition-all duration-300">
