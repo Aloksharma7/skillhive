@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CourseController;
 
 Route::get('/', function () {
     return view('home.index');
@@ -22,6 +24,10 @@ Route::middleware('guest')->group(function () {
         return view('dashboard.index');
     })->name('dashboard');
 //});
+
+
+Route::resource('categories', CategoryController::class);
+Route::resource('courses', CourseController::class);
 
 // Redirect root to dashboard if logged in, otherwise to login
 //Route::get('/', function () {
