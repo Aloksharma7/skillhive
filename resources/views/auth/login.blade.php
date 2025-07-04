@@ -1,118 +1,213 @@
 @extends('layouts.home')
+
 @section('content')
-<div class="max-w-md w-full auth-container rounded-2xl shadow-xl overflow-hidden">
-        <div class="p-10">
-            <!-- Error Alert (shown when backend returns errors) -->
-            <div id="errorAlert" class="hidden bg-error bg-opacity-10 border-l-4 border-error text-error p-4 mb-6 rounded-lg">
-                <div class="flex items-center">
-                    <i class="fas fa-exclamation-circle mr-2"></i>
-                    <div>
-                        <h3 class="font-medium" id="errorAlertTitle">There were some errors with your submission</h3>
-                        <ul class="list-disc list-inside text-sm mt-1" id="errorList"></ul>
-                    </div>
-                </div>
+<div class="min-h-screen flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 space-y-6">
+
+        <!-- Header -->
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-800">Log-In</h2>
+            <p class="mt-2 text-sm text-gray-600">
+                Don't have an account?
+                <a href="{{ route('register') }}" class="text-primary hover:underline font-medium">Register</a>
+            </p>
+        </div>
+
+        <!-- Success Message -->
+        @if (session('success'))
+            <div class="bg-green-100 text-green-700 border border-green-300 rounded-md p-4 text-sm">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <!-- Validation Errors -->
+        @if ($errors->any())
+            <div class="bg-red-100 text-red-700 border border-red-300 rounded-md p-4 text-sm">
+                <ul class="list-disc pl-5 space-y-1">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <!-- Login Form -->
+        <form method="POST" action="{{ route('login') }}" class="space-y-4" id="loginForm">
+            @csrf
+
+            <!-- Email Field -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autofocus
+                    value="{{ old('email') }}"
+                    class="block w-full rounded-md border border-gray-300 px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors @error('email') border-red-500 @enderror"
+                    placeholder="Enter your email address"
+                >
+                @error('email')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
             </div>
 
-            <!-- Success Message (shown after successful registration) -->
-            <div id="successAlert" class="hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6 rounded-lg">
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle mr-2"></i>
-                    <div>
-                        <h3 class="font-medium">Registration successful!</h3>
-                        <p class="text-sm mt-1">Please check your email to verify your account.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Header -->
-            <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">Create an account</h1>
-                <p class="text-gray-600">
-                    Already have an account?
-                    <a href="#" class="text-primary font-medium hover:underline">Login</a>
-                </p>
-            </div>
-
-            <!-- Social Login -->
-            <div class="mb-6">
-                <button type="button" class="w-full flex items-center justify-center gap-2 bg-white text-gray-700 py-3 px-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-all">
-                    <i class="fab fa-google text-red-500"></i>
-                    Continue with Google
-                </button>
-            </div>
-
-            <!-- Divider -->
-            <div class="flex items-center my-6">
-                <div class="flex-1 border-t border-gray-300"></div>
-                <span class="px-4 text-gray-500">or</span>
-                <div class="flex-1 border-t border-gray-300"></div>
-            </div>
-
-            <!-- Form -->
-            <form id="registrationForm" class="space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                        <input
-                            type="text"
-                            id="firstName"
-                            name="first_name"
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primaryLight transition-all"
-                            placeholder="John"
-                        >
-                        <div id="firstNameError" class="error-message text-xs text-error mt-1 hidden"></div>
-                    </div>
-                    <div>
-                        <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                        <input
-                            type="text"
-                            id="lastName"
-                            name="last_name"
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primaryLight transition-all"
-                            placeholder="Doe"
-                        >
-                        <div id="lastNameError" class="error-message text-xs text-error mt-1 hidden"></div>
-                    </div>
-                </div>
-
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <!-- Password Field -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                <div class="relative">
                     <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primaryLight transition-all"
-                        placeholder="your@email.com"
+                        id="password"
+                        name="password"
+                        type="password"
+                        required
+                        class="block w-full rounded-md border border-gray-300 px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors @error('password') border-red-500 @enderror"
+                        placeholder="Enter your password"
                     >
-                    <div id="emailError" class="error-message text-xs text-error mt-1 hidden"></div>
+                    <button
+                        type="button"
+                        class="absolute inset-y-0 right-0 pr-3 flex items-center"
+                        onclick="togglePasswordVisibility()"
+                    >
+                        <svg id="eyeIcon" class="h-5 w-5 text-gray-400 hover:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </button>
+                </div>
+                @error('password')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <!-- Remember Me & Forgot Password Row -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input
+                        id="remember"
+                        name="remember"
+                        type="checkbox"
+                        class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded transition-colors"
+                    >
+                    <label for="remember" class="ml-2 block text-sm text-gray-700">
+                        Remember me
+                    </label>
                 </div>
 
-                <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                    <div class="relative">
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primaryLight transition-all pr-10"
-                            placeholder="••••••••"
-                        >
-                        <button type="button" class="absolute right-3 top-3 text-gray-400 hover:text-gray-600" onclick="togglePasswordVisibility()">
-                            <i class="far fa-eye"></i>
-                        </button>
-                    </div>
-                    <div id="passwordError" class="error-message text-xs text-error mt-1 hidden"></div>
-                    <p class="mt-1 text-xs text-gray-500">Minimum 8 characters with at least one number</p>
+                <div class="text-sm">
+                    <a href="#" class="text-primary hover:underline font-medium">
+                        Forgot password?
+                    </a>
                 </div>
+            </div>
 
-                <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white py-3 px-4 rounded-lg font-medium transition-all mt-2 flex items-center justify-center">
-                    <span id="submitText">Create Account</span>
-                    <svg id="submitSpinner" class="hidden animate-spin ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <!-- Login Button -->
+            <div>
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 flex items-center justify-center font-medium"
+                >
+                    <span class="loading-text">Log In</span>
+                    <svg class="loading-spinner animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                 </button>
-            </form>
+            </div>
+        </form>
+
+
+
+        <!-- Terms and Privacy -->
+        <div class="text-center text-xs text-gray-500 mt-4">
+            By logging in, you agree to our
+            <a href="#" class="text-primary hover:underline">Terms of Service</a>
+            and
+            <a href="#" class="text-primary hover:underline">Privacy Policy</a>
         </div>
+
+    </div>
 </div>
-@endSection
+
+<!-- JavaScript -->
+<script>
+    // Form submission with loading state
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        const button = document.getElementById('loginButton');
+        const loadingText = button.querySelector('.loading-text');
+        const loadingSpinner = button.querySelector('.loading-spinner');
+
+        // Disable button and show loading state
+        button.disabled = true;
+        button.classList.add('opacity-75', 'cursor-not-allowed');
+        loadingText.textContent = 'Logging in...';
+        loadingSpinner.classList.remove('hidden');
+    });
+
+    // Password visibility toggle
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.innerHTML = `
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L8.464 8.464m1.414 1.414L12 12m-3.536-3.536l-1.414-1.414m4.95 4.95l1.414 1.414M12 12l3.536 3.536m-1.414-1.414L12 12m1.414 1.414l1.414 1.414" />
+            `;
+        } else {
+            passwordInput.type = 'password';
+            eyeIcon.innerHTML = `
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            `;
+        }
+    }
+
+    // Auto-hide success/error messages after 5 seconds
+    setTimeout(function() {
+        const successMessage = document.querySelector('.bg-green-100');
+        const errorMessage = document.querySelector('.bg-red-100');
+
+        if (successMessage) {
+            successMessage.style.transition = 'opacity 0.5s ease-out';
+            successMessage.style.opacity = '0';
+            setTimeout(() => successMessage.remove(), 500);
+        }
+
+        if (errorMessage) {
+            errorMessage.style.transition = 'opacity 0.5s ease-out';
+            errorMessage.style.opacity = '0';
+            setTimeout(() => errorMessage.remove(), 500);
+        }
+    }, 5000);
+
+    // Form validation feedback
+    document.getElementById('email').addEventListener('blur', function() {
+        const email = this.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email && !emailRegex.test(email)) {
+            this.classList.add('border-red-500');
+            this.classList.remove('border-gray-300');
+        } else {
+            this.classList.remove('border-red-500');
+            this.classList.add('border-gray-300');
+        }
+    });
+
+    // Enhanced form interaction
+    const inputs = document.querySelectorAll('input[type="email"], input[type="password"]');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.classList.add('ring-2', 'ring-primary', 'ring-opacity-50');
+        });
+
+        input.addEventListener('blur', function() {
+            this.classList.remove('ring-2', 'ring-primary', 'ring-opacity-50');
+        });
+    });
+</script>
+
+@endsection
