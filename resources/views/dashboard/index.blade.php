@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 @section('dash-content')
 
-<main class="flex-1 overflow-y-auto p-6 bg-[#F9FAFB]">
+<main class="flex-1 overflow-y-auto p-6 bg-[#F9FAFB]"> 
                 <!-- User Profile Card -->
                 <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-6">
                     <div class="flex items-center space-x-6">
