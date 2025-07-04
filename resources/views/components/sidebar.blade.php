@@ -2,7 +2,7 @@
     <div class="flex min-h-screen">
         <!-- Sidebar Navigation -->
         <div class="w-64 bg-[#4F46E5] text-white p-4 flex flex-col">
-            <!-- Logo --><a href="/">
+            <!-- Logo --><a href="{{ route('dashboard') }}">
             <div class="mb-8 p-2">
                 <h1 class="text-2xl font-bold">SkillHive</h1>
             </div></a>
