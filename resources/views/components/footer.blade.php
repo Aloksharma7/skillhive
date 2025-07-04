@@ -49,6 +49,7 @@
                 <div class="space-y-4">
                     <p class="text-white/90 flex items-center justify-center md:justify-start">
                         <span class="mr-3">📧</span>
+
                         info@yourcompany.com
                     </p>
                     <p class="text-white/90 flex items-center justify-center md:justify-start">
