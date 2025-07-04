@@ -2,30 +2,44 @@
     <div class="flex min-h-screen">
         <!-- Sidebar Navigation -->
         <div class="w-64 bg-[#4F46E5] text-white p-4 flex flex-col">
-            <!-- Logo -->
+            <!-- Logo --><a href="/">
             <div class="mb-8 p-2">
                 <h1 class="text-2xl font-bold">SkillHive</h1>
-            </div>
+            </div></a>
 
             <!-- Main Navigation -->
             <nav class="flex-1">
                 <ul class="space-y-2">
-                    <li>
-                        <a href="#" class="block px-4 py-2 rounded bg-[#4338CA] hover:bg-[#3730A3] transition">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 rounded hover:bg-[#6366F1] transition">Courses</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 rounded hover:bg-[#6366F1] transition">PDF Resources</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="block px-4 py-2 rounded hover:bg-[#6366F1] transition">Opportunities</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 rounded hover:bg-[#6366F1] transition">Blogs</a>
-                    </li>
+                    <a href="{{ route('dashboard') }}" 
+   class="block px-4 py-2 rounded transition 
+   {{ request()->routeIs('dashboard') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+   Dashboard
+</a>
+
+<a href="{{ route('course') }}" 
+   class="block px-4 py-2 rounded transition 
+   {{ request()->routeIs('course') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+   Courses
+</a>
+
+<a href="{{ route('pdfs') }}" 
+   class="block px-4 py-2 rounded transition 
+   {{ request()->routeIs('pdfs') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+   PDF Resources
+</a>
+
+<a href="{{ route('opportunities') }}" 
+   class="block px-4 py-2 rounded transition 
+   {{ request()->routeIs('opportunities') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+   Opportunities
+</a>
+
+<a href="{{ route('blogs') }}" 
+   class="block px-4 py-2 rounded transition 
+   {{ request()->routeIs('blogs') ? 'bg-[#4338CA]' : 'hover:bg-[#6366F1]' }}">
+   Blogs
+</a>
+
                 </ul>
             </nav>
 
