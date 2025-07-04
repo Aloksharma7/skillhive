@@ -19,9 +19,7 @@
                     <li>
                         <a href="#" class="block px-4 py-2 rounded hover:bg-[#6366F1] transition">PDF Resources</a>
                     </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 rounded hover:bg-[#6366F1] transition">Textbooks</a>
-                    </li>
+                    
                     <li>
                         <a href="#" class="block px-4 py-2 rounded hover:bg-[#6366F1] transition">Opportunities</a>
                     </li>
