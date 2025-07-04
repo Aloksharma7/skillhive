@@ -2,10 +2,10 @@
 <nav class="bg-lightblue shadow-md">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     
-    <!-- Logo -->
+    <!-- Logo --><a href="/">
     <div class="flex items-center">
       <span class="text-2xl font-bold text-skyblue">Skill<span class="text-lightpink">Hive</span></span>
-    </div>
+    </div></a>
     
     <!-- Nav Buttons -->
     <div id="nav-buttons" class="space-x-4">
