@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Opportunity;
 use App\Models\PdfResources;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -47,7 +48,8 @@ Route::middleware('auth')->group(function () {
     })->name('pdfs');
 
     Route::get('/opportunities', function (){
-        return view('opportunities.index');
+        $opportunities = Opportunity::latest()->paginate(10);
+        return view('opportunities.index', compact('opportunities'));
     })->name('opportunities');
 
 
