@@ -155,46 +155,6 @@
                                 </div>
                             </div>
 
-                            <!-- Quick Actions -->
-                            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-                                <div class="space-y-3">
-                                    <button class="w-full bg-{{ $color }}-600 text-white py-3 px-4 rounded-lg hover:bg-{{ $color }}-700 transition-colors duration-200 font-medium">
-                                        Enroll Now
-                                    </button>
-                                    <button class="w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200 font-medium">
-                                        Add to Favorites
-                                    </button>
-                                    <button class="w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200 font-medium">
-                                        Share Course
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Table of Contents -->
-                            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h3>
-                                <nav class="space-y-2">
-                                    <a href="#description" class="block text-sm text-gray-600 hover:text-{{ $color }}-600 py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                                        Course Overview
-                                    </a>
-                                    @if($course->how_section)
-                                        <a href="#how-section" class="block text-sm text-gray-600 hover:text-{{ $color }}-600 py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                                            How It Works
-                                        </a>
-                                    @endif
-                                    @if($course->guidance)
-                                        <a href="#guidance" class="block text-sm text-gray-600 hover:text-{{ $color }}-600 py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                                            Guidance
-                                        </a>
-                                    @endif
-                                    @if($course->reference)
-                                        <a href="#reference" class="block text-sm text-gray-600 hover:text-{{ $color }}-600 py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                                            References
-                                        </a>
-                                    @endif
-                                </nav>
-                            </div>
                         </div>
                     </div>
                 </div>
