@@ -24,7 +24,7 @@ class PdfResourceController extends Controller
      */
     public function create(): View
     {
-        return view('admin.pdfresources.create');
+        return view('admin.pdfresource.create');
     }
 
     /**
@@ -41,7 +41,7 @@ class PdfResourceController extends Controller
 
         PdfResources::create($validated);
 
-        return redirect()->route('admin.pdfresource.index')
+        return redirect()->to('/pdfresource')
             ->with('success', 'PDF Resource created successfully!');
     }
 
