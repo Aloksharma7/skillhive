@@ -14,7 +14,8 @@ use App\Models\Course;
 use App\Models\Category;
 
 Route::get('/', function () {
-    return view('home.index');
+    $courses = Course::all();
+    return view('home.index' , compact('courses'));
 });
 // Add this route to your web.php
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('search');
@@ -60,6 +61,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/opportunity', function (){
         return view('admin.opportunities.index');
     })->name('opportunity');
+
 
     Route::resource('opportunity', OpportunityController::class);
     Route::resource('pdfresource', PdfresourceController::class);
