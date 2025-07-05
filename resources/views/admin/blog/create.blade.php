@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h4>Create New Blog</h4>
-                        <a href="{{ route('blog.index') }}" class="btn btn-secondary">
+                        <a href="{{ route('blogs.index') }}" class="btn btn-secondary">
                             <i class="fas fa-arrow-left"></i> Back to Blogs
                         </a>
                     </div>
@@ -24,7 +24,7 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ route('blog.store') }}">
+                        <form method="POST" action="{{ route('blogs.store') }}">
                             @csrf
 
                             <div class="mb-3">
