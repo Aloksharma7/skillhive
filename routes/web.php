@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PdfResources;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
@@ -41,7 +42,8 @@ Route::middleware('auth')->group(function () {
     })->name('course');
 
     Route::get('/pdfs', function (){
-        return view('pdfs.index');
+        $pdfresource = PdfResources::orderBy('created_at', 'desc')->paginate(10);
+        return view('pdfs.index', compact('pdfresource'));
     })->name('pdfs');
 
     Route::get('/opportunities', function (){

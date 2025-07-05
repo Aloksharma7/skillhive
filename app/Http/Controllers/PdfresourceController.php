@@ -15,10 +15,8 @@ class PdfResourceController extends Controller
     public function index(): View
     {
         $pdfresource = PdfResources::orderBy('created_at', 'desc')->paginate(10);
-
         return view('admin.pdfresource.index', compact('pdfresource'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
