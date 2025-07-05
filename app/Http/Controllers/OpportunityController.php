@@ -15,7 +15,7 @@ class OpportunityController extends Controller
     public function index(): View
     {
         $opportunities = Opportunity::latest()->paginate(10);
-        return view('opportunities.index', compact('opportunities'));
+        return view('admin.opportunities.index', compact('opportunities'));
     }
 
     /**
@@ -23,7 +23,7 @@ class OpportunityController extends Controller
      */
     public function create(): View
     {
-        return view('opportunities.create');
+        return view('admin.opportunities.create');
     }
 
     /**
@@ -41,7 +41,7 @@ class OpportunityController extends Controller
 
         Opportunity::create($validated);
 
-        return redirect()->route('opportunities.index')
+        return redirect()->to('opportunity')
             ->with('success', 'Opportunity created successfully!');
     }
 
@@ -58,7 +58,7 @@ class OpportunityController extends Controller
      */
     public function edit(Opportunity $opportunity): View
     {
-        return view('opportunities.edit', compact('opportunity'));
+        return view('admin.opportunities.edit', compact('opportunity'));
     }
 
     /**
@@ -76,7 +76,7 @@ class OpportunityController extends Controller
 
         $opportunity->update($validated);
 
-        return redirect()->route('opportunities.index')
+        return redirect()->route('admin.opportunities.index')
             ->with('success', 'Opportunity updated successfully!');
     }
 
@@ -87,7 +87,7 @@ class OpportunityController extends Controller
     {
         $opportunity->delete();
 
-        return redirect()->route('opportunities.index')
+        return redirect()->route('admin.opportunities.index')
             ->with('success', 'Opportunity deleted successfully!');
     }
 }

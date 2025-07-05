@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\PdfresourceController;
 
 use App\Models\Course;
 use App\Models\Category;
@@ -55,6 +56,7 @@ Route::middleware('auth')->group(function () {
     })->name('opportunity');
 
     Route::resource('opportunity', OpportunityController::class);
+    Route::resource('pdfresources', PdfresourceController::class);
 
 });
 
