@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PdfresourceController;
+use App\Http\Controllers\BlogController;
 
 use App\Models\Course;
 use App\Models\Category;
@@ -47,16 +48,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/opportunities', function (){
         return view('opportunities.index');
     })->name('opportunities');
-    Route::get('/blogs', function (){
+    Route::get('/blog', function (){
         return view('blogs.index');
-    })->name('blogs');
+    })->name('blog');
 
     Route::get('/opportunity', function (){
         return view('admin.opportunities.index');
     })->name('opportunity');
 
     Route::resource('opportunity', OpportunityController::class);
-    Route::resource('pdfresources', PdfresourceController::class);
+    Route::resource('pdfresource', PdfresourceController::class);
+    Route::resource('blogs', BlogController::class);
 
 });
 

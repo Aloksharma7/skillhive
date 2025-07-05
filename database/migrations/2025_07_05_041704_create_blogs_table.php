@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pdfresource', function (Blueprint $table) {
+        Schema::create('blog', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('type');
-            $table->string('description');
-            $table->string('url')->nullable();
+            $table->string('slug');
+            $table->text('description');
+            $table->boolean('published')->default(false);
+            $table->string('featured_image');
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pdfresource');
+        Schema::dropIfExists('blog');
     }
 };

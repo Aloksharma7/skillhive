@@ -9,7 +9,7 @@ class PdfResources extends Model
 {
     use HasFactory;
 
-    protected $table = 'pdfresources';
+    protected $table = 'pdfresource';
 
     protected $fillable = [
         'title',

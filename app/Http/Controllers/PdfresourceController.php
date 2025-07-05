@@ -16,7 +16,7 @@ class PdfResourceController extends Controller
     {
         $pdfResources = PdfResources::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('admin.pdfresources.index', compact('pdfResources'));
+        return view('admin.pdfresource.index', compact('pdfResources'));
     }
 
     /**
@@ -41,7 +41,7 @@ class PdfResourceController extends Controller
 
         PdfResources::create($validated);
 
-        return redirect()->route('admin.pdfresources.index')
+        return redirect()->route('admin.pdfresource.index')
             ->with('success', 'PDF Resource created successfully!');
     }
 
@@ -50,7 +50,7 @@ class PdfResourceController extends Controller
      */
     public function show(PdfResources $pdfResource): View
     {
-        return view('admin.pdfresources.show', compact('pdfResource'));
+        return view('admin.pdfresource.show', compact('pdfResource'));
     }
 
     /**
@@ -58,7 +58,7 @@ class PdfResourceController extends Controller
      */
     public function edit(PdfResources $pdfResource): View
     {
-        return view('admin.pdfresources.edit', compact('pdfResource'));
+        return view('admin.pdfresource.edit', compact('pdfResource'));
     }
 
     /**
@@ -75,7 +75,7 @@ class PdfResourceController extends Controller
 
         $pdfResource->update($validated);
 
-        return redirect()->route('admin.pdfresources.index')
+        return redirect()->route('admin.pdfresource.index')
             ->with('success', 'PDF Resource updated successfully!');
     }
 
@@ -86,7 +86,7 @@ class PdfResourceController extends Controller
     {
         $pdfResource->delete();
 
-        return redirect()->route('pdfresources.index')
+        return redirect()->route('pdfresource.index')
             ->with('success', 'PDF Resource deleted successfully!');
     }
 }
