@@ -36,7 +36,7 @@
 <!-- Course and collage -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-   <section class="max-w-6xl mx-auto px-4 py-12 w-[90%]">
+<section class="max-w-6xl mx-auto px-4 py-12 w-[90%]">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-3">Find Your Study Path</h2>
         <p class="text-gray-500 max-w-2xl mx-auto">Select from our carefully curated academic programs</p>
@@ -45,70 +45,116 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- Card: Engineering -->
-        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
-            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
-                <div class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-all mb-3">
+        <div
+            class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div
+                class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div
+                    class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-all mb-3">
                     <i class="fas fa-user-graduate text-blue-600 text-2xl"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800">Engineering</h3>
                 <p class="text-sm text-gray-500 mt-1">6,323 Colleges</p>
             </div>
             <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
-                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">BE/B.Tech</div>
-                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">Diploma</div>
-                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">ME/M.Tech</div>
+                <a href="{{ route('search', ['query' => 'BE/B.Tech']) }}"
+                   class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg block cursor-pointer">
+                    BE/B.Tech
+                </a>
+                <a href="{{ route('search', ['query' => 'Diploma']) }}"
+                   class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg block cursor-pointer">
+                    Diploma
+                </a>
+                <a href="{{ route('search', ['query' => 'ME/M.Tech']) }}"
+                   class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg block cursor-pointer">
+                    ME/M.Tech
+                </a>
             </div>
         </div>
 
         <!-- Card: Medical -->
-        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
-            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
-                <div class="w-16 h-16 flex items-center justify-center bg-pink-50 rounded-xl group-hover:bg-pink-100 transition-all mb-3">
+        <div
+            class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div
+                class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div
+                    class="w-16 h-16 flex items-center justify-center bg-pink-50 rounded-xl group-hover:bg-pink-100 transition-all mb-3">
                     <i class="fa-solid fa-house-medical text-pink-500 text-2xl"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800">Medical</h3>
                 <p class="text-sm text-gray-500 mt-1">7,895 Colleges</p>
             </div>
             <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
-                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">MBBS</div>
-                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">Nursing</div>
-                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">Pharmecy</div>
+                <a href="{{ route('search', ['query' => 'MBBS']) }}"
+                   class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg block cursor-pointer">
+                    MBBS
+                </a>
+                <a href="{{ route('search', ['query' => 'Nursing']) }}"
+                   class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg block cursor-pointer">
+                    Nursing
+                </a>
+                <a href="{{ route('search', ['query' => 'Pharmecy']) }}"
+                   class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg block cursor-pointer">
+                    Pharmecy
+                </a>
             </div>
         </div>
 
         <!-- Card: Commerce -->
-        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
-            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
-                <div class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-all mb-3">
+        <div
+            class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div
+                class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div
+                    class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-all mb-3">
                     <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800">Commerce</h3>
                 <p class="text-sm text-gray-500 mt-1">5,042 Colleges</p>
             </div>
             <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
-                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">B.Com</div>
-                <div class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg cursor-pointer">M.Com</div>
+                <a href="{{ route('search', ['query' => 'B.Com']) }}"
+                   class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg block cursor-pointer">
+                    B.Com
+                </a>
+                <a href="{{ route('search', ['query' => 'M.Com']) }}"
+                   class="text-sm text-gray-700 hover:text-blue-600 transition py-2 px-3 hover:bg-blue-50 rounded-lg block cursor-pointer">
+                    M.Com
+                </a>
             </div>
         </div>
 
         <!-- Card: Arts -->
-        <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
-            <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
-                <div class="w-16 h-16 flex items-center justify-center bg-pink-50 rounded-xl group-hover:bg-pink-100 transition-all mb-3">
+        <div
+            class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
+            <div
+                class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
+                <div
+                    class="w-16 h-16 flex items-center justify-center bg-pink-50 rounded-xl group-hover:bg-pink-100 transition-all mb-3">
                     <i class="fas fa-paint-brush text-pink-500 text-2xl"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800">Arts</h3>
                 <p class="text-sm text-gray-500 mt-1">5,691 Colleges</p>
             </div>
             <div class="w-2/3 flex flex-col justify-center pl-6 space-y-2">
-                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">BA</div>
-                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">MA</div>
-                <div class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg cursor-pointer">BFA</div>
+                <a href="{{ route('search', ['query' => 'BA']) }}"
+                   class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg block cursor-pointer">
+                    BA
+                </a>
+                <a href="{{ route('search', ['query' => 'MA']) }}"
+                   class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg block cursor-pointer">
+                    MA
+                </a>
+                <a href="{{ route('search', ['query' => 'BFA']) }}"
+                   class="text-sm text-gray-700 hover:text-pink-500 transition py-2 px-3 hover:bg-pink-50 rounded-lg block cursor-pointer">
+                    BFA
+                </a>
             </div>
         </div>
 
     </div>
 </section>
+
 
 
 <!-- Popular Courses Section -->
