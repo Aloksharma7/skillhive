@@ -56,6 +56,17 @@ Route::middleware('auth')->group(function () {
     })->name('opportunities');
 
 
+    Route::get('/opportunities/{id}', function ($id) {
+        $opportunity = Opportunity::findOrFail($id);
+
+        // If tags are stored as JSON or comma-separated
+        if (is_string($opportunity->tags)) {
+            $opportunity->tags = explode(',', $opportunity->tags); // or json_decode
+        }
+        return view('opportunities.show', compact('opportunity'));
+    })->name('opportunities.show');
+
+
     Route::get('/blog', function (){
         return view('blogs.index');
     });

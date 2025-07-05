@@ -53,7 +53,7 @@
                                 </div>
                             @endif
 
-                            <a href="/opportunities/show"
+                            <a href="/opportunities/{{$opportunity->id}}"
                                class="inline-block text-sm font-medium text-{{ $randomColor }}-600 hover:underline">
                                 Read more →
                             </a>

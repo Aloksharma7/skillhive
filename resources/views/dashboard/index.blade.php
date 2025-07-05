@@ -16,7 +16,7 @@
                             <h3 class="text-2xl font-bold text-[#111827]">{{ Auth::user()->name }}</h3>
                             <p class="text-[#6B7280]">{{ Auth::user()->email }}</p>
                             <div class="flex space-x-4 mt-2">
-                                <span class="px-3 py-1 bg-[#E0E7FF] text-[#4F46E5] rounded-full text-sm">Administrator</span>
+{{--                                <span class="px-3 py-1 bg-[#E0E7FF] text-[#4F46E5] rounded-full text-sm">Administrator</span>--}}
                                 <span class="px-3 py-1 bg-[#ECFDF5] text-[#059669] rounded-full text-sm">Active</span>
                             </div>
                         </div>
@@ -47,19 +47,11 @@
 
                     <!-- Recent Activity -->
                     <div class="mt-8">
-                        <h4 class="text-lg font-semibold text-[#111827] mb-4">Recent Activity</h4>
+                        <h4 class="text-lg font-semibold text-[#111827] mb-4">Recent Courses</h4>
                         <div class="space-y-4">
-                            <div class="flex items-start space-x-3">
-                                <div class="w-8 h-8 rounded-full bg-[#E0E7FF] flex items-center justify-center text-[#4F46E5] mt-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="text-[#111827]">Completed course "Advanced Web Development"</p>
-                                    <p class="text-sm text-[#6B7280]">Yesterday at 3:45 PM</p>
-                                </div>
-                            </div>
+
+
+                            @foreach ($courses->take(6) as $course)
                             <div class="flex items-start space-x-3">
                                 <div class="w-8 h-8 rounded-full bg-[#E0E7FF] flex items-center justify-center text-[#4F46E5] mt-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -67,10 +59,11 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-[#111827]">Downloaded "JavaScript Design Patterns" PDF</p>
-                                    <p class="text-sm text-[#6B7280]">2 days ago</p>
+                                    <p class="text-[#111827]">{{ $course->title }}</p>
+                                    <p class="text-sm text-[#6B7280]">{{ $course->updated_at }}</p>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

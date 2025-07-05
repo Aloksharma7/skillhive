@@ -33,7 +33,7 @@
         @endif
 
         <!-- Back Button -->
-        <a href="{{ route('opportunities.index') }}"
+        <a href="/opportunities"
            class="inline-block mt-4 text-sm font-medium text-{{ $opportunity->color }}-600 hover:underline">
             ← Back to all opportunities
         </a>
