@@ -32,7 +32,9 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/dashboard', function () {
-        return view('dashboard.index');
+        $courses = Course::all();
+        $pdfresources = Pdfresources::all();
+        return view('dashboard.index', compact('courses' , 'pdfresources'));
     })->name('dashboard');
     Route::resource('categories', CategoryController::class);
     Route::resource('courses', CourseController::class);
