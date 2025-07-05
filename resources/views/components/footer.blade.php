@@ -11,7 +11,7 @@
                         Creating beautiful, modern, and minimal designs that make a lasting impression.
                     <p class="text-white/90 flex items-center justify-center md:justify-start">
                         <span class="mr-3">📧</span>
-                        info@yourcompany.com
+                        contact@skillhive.com
                     </p>
                     <div class="flex space-x-5 pt-2">
                         <a href="#" class="text-gray-400 hover:text-white hover:scale-110 transition-all duration-300">
@@ -32,22 +32,18 @@
                     <h3 class="text-xl font-semibold text-white border-b border-gray-700 pb-3">Quick Links</h3>
                     <ul class="space-y-4">
                         <li>
-                            <a href="#" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">
+                            <a href="{{route("course")}}" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">
                                 Course
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">
+                            <a href="{{route("pdfs")}}" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">
                                 PDF Resources
                             </a>
                         </li>
+                       
                         <li>
-                            <a href="#" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">
-                                Archive
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold hover:translate-x-2 transition-all duration-300 inline-block">
+                            <a href="{{route("opportunities")}}" class="text-blue-400 hover:text-blue-300 font-semibold hover:translate-x-2 transition-all duration-300 inline-block">
                                 Opportunities
                             </a>
                         </li>
