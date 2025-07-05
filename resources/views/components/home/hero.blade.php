@@ -10,18 +10,20 @@
         <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-90">
             Access 10,000+ courses from top universities and companies worldwide. Learn anything, anytime.
         </p>
-        <div class="max-w-2xl mx-auto flex bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+        <!-- Updated Search Form -->
+        <form action="{{ route('search') }}" method="GET" class="max-w-2xl mx-auto flex bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <input
                 type="text"
+                name="query"
                 placeholder="Search for courses, subjects, or providers..."
                 class="flex-grow px-6 py-5 focus:outline-none text-gray-800 placeholder-gray-400"
             >
-            <button class="bg-[#4F46E5] hover:bg-[#4338CA] px-8 text-white transition-all flex items-center justify-center">
+            <button type="submit" class="bg-[#4F46E5] hover:bg-[#4338CA] px-8 text-white transition-all flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
             </button>
-        </div>
+        </form>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
             <span class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm">Computer Science</span>
             <span class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm">Business</span>
@@ -41,7 +43,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
+
         <!-- Card: Engineering -->
         <div class="bg-white rounded-xl p-6 border border-gray-200 group hover:-translate-y-1 transition-all duration-300 hover:shadow-md flex">
             <div class="w-1/3 flex flex-col items-center justify-center text-center pr-4 border-r border-gray-100">
@@ -137,7 +139,7 @@
                         </svg>
                         Harvard University
                     </p>
-                    
+
                     <div class="mt-6 pt-2 border-t border-[#E5E7EB] flex justify-between items-center">
                         <span class="text-lg font-bold text-[#4F46E5]"></span>
                         <button class="px-4 py-2 bg-[#4F46E5] hover:bg-[#4338CA] text-white rounded-lg text-sm font-medium transition-colors">
@@ -278,7 +280,7 @@
     </div>
 </section>
 
-<!-- Providers Section 
+<!-- Providers Section
 <section class="py-16 bg-[#F9FAFB]">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
