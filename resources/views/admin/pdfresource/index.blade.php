@@ -8,7 +8,7 @@
                 <h1 class="text-3xl font-bold text-gray-900 tracking-tight">PDF Resources</h1>
                 <p class="text-gray-600 mt-2">Manage and organize your PDF resources</p>
             </div>
-            <a href="{{ route('pdfresources.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/25">
+            <a href="{{ route('pdfresource.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/25">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                 </svg>
@@ -33,7 +33,7 @@
 
         <!-- Main Content -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            @if($pdfResources->count() > 0)
+            @if($pdfresource->count() > 0)
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
@@ -47,7 +47,7 @@
                         </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach($pdfResources as $resource)
+                        @foreach($pdfresource as $resource)
                             <tr class="hover:bg-gray-50 transition-colors duration-200">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
@@ -89,18 +89,18 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center space-x-2">
-                                        <a href="{{ route('pdfresources.show', $resource) }}" class="inline-flex items-center justify-center w-8 h-8 text-blue-600 bg-blue-100 rounded-lg hover:bg-blue-200 transition-all duration-200 hover:-translate-y-0.5" title="View">
+                                        <a href="{{ route('pdfresource.show', $resource) }}" class="inline-flex items-center justify-center w-8 h-8 text-blue-600 bg-blue-100 rounded-lg hover:bg-blue-200 transition-all duration-200 hover:-translate-y-0.5" title="View">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                                             </svg>
                                         </a>
-                                        <a href="{{ route('pdfresources.edit', $resource) }}" class="inline-flex items-center justify-center w-8 h-8 text-amber-600 bg-amber-100 rounded-lg hover:bg-amber-200 transition-all duration-200 hover:-translate-y-0.5" title="Edit">
+                                        <a href="{{ route('pdfresource.edit', $resource) }}" class="inline-flex items-center justify-center w-8 h-8 text-amber-600 bg-amber-100 rounded-lg hover:bg-amber-200 transition-all duration-200 hover:-translate-y-0.5" title="Edit">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                                             </svg>
                                         </a>
-                                        <form action="{{ route('pdfresources.destroy', $resource) }}" method="POST" class="inline-block"
+                                        <form action="{{ route('pdfresource.destroy', $resource) }}" method="POST" class="inline-block"
                                               onsubmit="return confirm('Are you sure you want to delete this resource?')">
                                             @csrf
                                             @method('DELETE')
@@ -119,9 +119,9 @@
                 </div>
 
                 <!-- Pagination -->
-                @if($pdfResources->hasPages())
+                @if($pdfresource->hasPages())
                     <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                        {{ $pdfResources->links() }}
+                        {{ $pdfresource->links() }}
                     </div>
                 @endif
             @else
@@ -133,7 +133,7 @@
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">No PDF resources yet</h3>
                     <p class="text-gray-500 mb-8 max-w-sm mx-auto">Create your first PDF resource to get started with organizing your content library.</p>
-                    <a href="{{ route('pdfresources.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/25">
+                    <a href="{{ route('pdfresource.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/25">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
