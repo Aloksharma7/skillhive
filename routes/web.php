@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\CourseController;
 
 Route::get('/', function () {
@@ -43,6 +44,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/blogs', function (){
         return view('blogs.index');
     })->name('blogs');
+
+    Route::get('/opportunity', function (){
+        return view('admin.opportunities.index');
+    })->name('opportunity');
+
+    Route::resource('opportunity', OpportunityController::class);
 
 });
 
