@@ -12,9 +12,9 @@ class CourseController extends Controller
     public function index()
     {
         // eager load categories to avoid N+1 problem
-//        $courses = Course::with('categories')->get();
+        $courses = Course::all();
         $categories = Category::all();
-        return view('admin.courses.index', compact('categories'));
+        return view('admin.courses.index', compact('categories','courses'));
     }
 
     // Show create form
@@ -56,7 +56,7 @@ class CourseController extends Controller
 
         Course::create($data);
 
-        return redirect()->route('admin.courses.index')->with('success', 'Course created successfully!');
+        return redirect()->to('/courses')->with('success', 'Course created successfully!');
     }
 
     // Show single course

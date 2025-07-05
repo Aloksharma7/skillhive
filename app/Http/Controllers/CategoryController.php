@@ -31,7 +31,7 @@ class CategoryController extends Controller
         // Fix: Pass only the validated data as an array
         Category::create($request->only(['name', 'slug']));
 
-        return redirect()->route('admin.categories.index')->with('success', 'Category created!');
+        return redirect()->to('/categories')->with('success', 'Category created!');
     }
 
     // Show single category (optional)
