@@ -6,6 +6,9 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\CourseController;
 
+use App\Models\Course;
+use App\Models\Category;
+
 Route::get('/', function () {
     return view('home.index');
 });
@@ -31,7 +34,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('courses', CourseController::class);
 
     Route::get('/course', function (){
-        return view('components.course.index');
+        $courses = Course::with('category')->get();
+        $categories = Category::all();
+        return view('components.course.index', compact('courses', 'categories'));
     })->name('course');
 
     Route::get('/pdfs', function (){

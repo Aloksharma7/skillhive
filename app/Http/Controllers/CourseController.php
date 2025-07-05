@@ -62,7 +62,9 @@ class CourseController extends Controller
     // Show single course
     public function show(Course $course)
     {
-        return view('admin.courses.show', compact('course'));
+        $courses = Course::all();
+        $categories = Category::all();
+        return view('admin.courses.show', compact('course', 'categories'));
     }
 
     // Show edit form
