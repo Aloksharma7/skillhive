@@ -122,6 +122,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Course Card 1 -->
+            <a href="/courses/4">
             <div class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all border border-[#E5E7EB] hover:border-[#D1D5DB]">
                 <div class="relative h-56 bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] flex items-center justify-center">
                     <span class="text-white text-3xl font-bold">CS101</span>
@@ -147,9 +148,10 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div></a>
 
             <!-- Course Card 2 -->
+            <a href="/courses/5">
             <div class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all border border-[#E5E7EB] hover:border-[#D1D5DB]">
                 <div class="relative h-56 bg-gradient-to-r from-[#059669] to-[#10B981] flex items-center justify-center">
                     <span class="text-white text-3xl font-bold">AI101</span>
@@ -174,9 +176,10 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div></a>
 
             <!-- Course Card 3 -->
+            <a href="/courses/6">
             <div class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all border border-[#E5E7EB] hover:border-[#D1D5DB]">
                 <div class="relative h-56 bg-gradient-to-r from-[#D946EF] to-[#A855F7] flex items-center justify-center">
                     <span class="text-white text-3xl font-bold">DS101</span>
@@ -198,8 +201,9 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div></a>
             <!-- Course Card 4 -->
+            <a href="/courses/7">
             <div class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all border border-[#E5E7EB] hover:border-[#D1D5DB]">
                 <div class="relative h-56 bg-gradient-to-r from-[#D946EF] to-[#A855F7] flex items-center justify-center">
                     <span class="text-white text-3xl font-bold">IIT01</span>
@@ -221,7 +225,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> </a>
         </div>
 
         <div class="text-center mt-16">
@@ -326,7 +330,7 @@
             <a href="#" class="px-8 py-4 bg-white text-[#4F46E5] rounded-lg hover:bg-opacity-90 font-medium transition-all shadow-lg hover:shadow-xl">
                 Browse All Courses
             </a>
-            <a href="#" class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:bg-opacity-10 font-medium transition-all">
+            <a href="#" class="px-8 py-4 border-2 border-white text-white rounded-lg font-medium transition-all">
                 <span class="flex items-center justify-center">
                     How It Works
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
