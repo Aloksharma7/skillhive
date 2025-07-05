@@ -14,9 +14,8 @@ use App\Models\Category;
 Route::get('/', function () {
     return view('home.index');
 });
-    Route::get('/search', function(){
-        return view('home.search');
-    })->name('search');
+// Add this route to your web.php
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('search');
 // Authentication routes
 Route::middleware('guest')->group(function () {
     Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
@@ -48,9 +47,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/opportunities', function (){
         return view('opportunities.index');
     })->name('opportunities');
+
+
     Route::get('/blog', function (){
         return view('blogs.index');
-    })->name('blog');
+    });
 
     Route::get('/opportunity', function (){
         return view('admin.opportunities.index');
