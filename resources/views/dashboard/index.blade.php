@@ -32,12 +32,12 @@
                     <!-- Stats -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                         <div class="bg-[#F9FAFB] p-4 rounded-lg border border-[#E5E7EB]">
-                            <p class="text-[#6B7280]">Courses Enrolled</p>
-                            <p class="text-2xl font-bold text-[#111827]">12</p>
+                            <p class="text-[#6B7280]"> Total Courses available</p>
+                            <p class="text-2xl font-bold text-[#111827]">{{$courses->count()}}</p>
                         </div>
                         <div class="bg-[#F9FAFB] p-4 rounded-lg border border-[#E5E7EB]">
                             <p class="text-[#6B7280]">Resources Downloaded</p>
-                            <p class="text-2xl font-bold text-[#111827]">24</p>
+                            <p class="text-2xl font-bold text-[#111827]">{{$pdfresources->count()+$courses->count()}}</p>
                         </div>
                         <div class="bg-[#F9FAFB] p-4 rounded-lg border border-[#E5E7EB]">
                             <p class="text-[#6B7280]">Last Active</p>
