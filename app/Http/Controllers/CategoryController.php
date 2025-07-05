@@ -11,7 +11,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        return view('admin.categories.index', compact('categories'));
     }
 
     // Show create form
@@ -25,9 +25,11 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255|unique:categories',
         ]);
 
-        Category::create($request->only('name'));
+        // Fix: Pass only the validated data as an array
+        Category::create($request->only(['name', 'slug']));
 
         return redirect()->route('admin.categories.index')->with('success', 'Category created!');
     }
