@@ -25,15 +25,12 @@
             </button>
         </form>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="{{ route('search', ['query' => 'Computer Science']) }}"
+            <a href="{{ route('search', ['query' => 'ComputerScience']) }}"
                class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm hover:bg-white/20 transition">
                 Computer Science
             </a>
-            <a href="{{ route('search', ['query' => 'Business']) }}"
-               class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm hover:bg-white/20 transition">
-                Business
-            </a>
-            <a href="{{ route('search', ['query' => 'Data Science']) }}"
+
+            <a href="{{ route('search', ['query' => 'DataScience']) }}"
                class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm hover:bg-white/20 transition">
                 Data Science
             </a>
